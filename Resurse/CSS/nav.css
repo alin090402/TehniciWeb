@@ -1,0 +1,160 @@
+:root {
+    --primaryColor: #3BC7DB;
+    --darker: #2A8C9C;
+    --lighter: #3FD1E8;
+    --var123: #19535C;
+    --var1234: #34AFC2;
+    --backgroundColor : #CDE6FF;
+    --navHeight: 2em;
+  } 
+nav{
+    position: sticky;
+    opacity: 100%;
+    z-index: 5;
+    font-size: 20px;
+    width: 100%;
+    height: var(--navHeight);
+    left: 0;
+    top: 0;
+    display: flex;
+    background-color: var(--lighter);
+}
+
+nav *{
+    font-size: 20px;
+    font-style: normal;
+    text-decoration: none;
+    color: black;
+    margin: 0;
+    padding: 0;
+    
+    
+}
+
+nav ul.meniu{
+    display: flex;
+    list-style: none;
+    height: var(--navHeight);
+    width: 100%;
+    
+    
+}
+span.HomeButton
+{
+    color: var(--lighter);
+    transition: inherit;
+}
+
+
+nav ul.meniu>li{
+    
+    height: var(--navHeight);
+}
+nav ul.meniu>li:hover{
+    height: var(--navHeight);
+}
+
+nav ul.meniu>li>a{
+    padding: 0.3em;
+    display: block;
+}
+
+#HamburgerMenu{
+    
+    margin-left: 1em;
+    margin-right: auto;
+    display: none;
+    height: var(--navHeight)
+}
+#chbox{
+    display: none;
+}
+
+
+#HamburgerMenu img{
+    height: var(--navHeight);
+    
+}
+
+
+
+nav *{
+    font-style: normal;
+    text-decoration: none;
+    color: black;
+    margin: 0;
+    padding: 0;   
+}
+nav ul.meniu>li:hover ul.submeniu{
+    visibility: visible;
+}
+
+nav ul.meniu li a{
+    display: block;
+    color: black;
+    transition:color 0.5s;
+    background-color: var(--lighter);
+}
+nav ul.meniu>li{
+    background-color: var(--lighter);
+}
+
+
+
+nav ul.meniu li a:hover{
+    color: white;
+}
+nav ul.meniu>li:hover span{
+    color: white;
+}
+
+nav ul.meniu>li:hover ul.submeniu{
+    visibility: visible;
+    transform-origin: 50% 0;
+    animation-name: a_submeniu;
+    animation-iteration-count:1;
+    animation-duration:0.5s;
+    animation-fill-mode:forwards;
+    animation-timing-function:linear;
+}
+
+nav ul.submeniu{
+    position: relative;
+    visibility: hidden;
+    display: block;
+    list-style: none;
+    width: 10em;
+    margin: 0;
+    padding: 0;
+    z-index: 10;
+   
+}
+
+nav ul.submeniu li{
+    display: block;
+    height: var(--navHeight);
+    background-color: var(--lighter);
+    z-index: 10;
+}
+nav ul.submeniu li>a{
+    padding:  0.3em;
+}
+
+nav ul.submeniu li:hover{
+}
+
+@keyframes a_submeniu{
+    0%{
+        opacity: 0.5;
+        transform: scale(0.5, 0.5);
+    }
+    
+    100%{
+        opacity: 1;
+        transform: scale(1, 1);
+    }
+}
+
+
+
+
