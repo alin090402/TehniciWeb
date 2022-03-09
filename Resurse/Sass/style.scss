@@ -146,9 +146,11 @@ footer {
 	padding: 1rem;
 }
 @media only screen and (max-width: 1100px) {
-    :root {
-        --fontsize: 16px;
-      } 
+    $fontsize: 16px;
+
+	html{
+		font-size: $fontsize;
+	}
     #container{
         display: grid;
         grid-template-areas:    "p1 p1 p1"
@@ -164,9 +166,11 @@ footer {
 
   }
   @media only screen and (max-width: 700px) {
-    :root {
-        --fontsize: 12px;
-      } 
+    $fontsize: 12px;
+
+	html{
+		font-size: $fontsize;
+	} 
     #container{
         display: grid;
         grid-template-areas:    "p1"
