@@ -12,7 +12,7 @@
   } 
 
 
->header{
+header{
     position: relative;
     
 }
@@ -170,7 +170,7 @@ footer {
         display: grid;
         grid-template-areas:    "p1 p1 p1"
                                 "p3 p2 p2 "
-                                "p4 p5 ."
+                                "p4 p4 p5"
                                 "p8 p8 p8"
                                 "p7 p7 p6";
         grid-template-columns: 1fr 1fr 1fr;

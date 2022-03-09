@@ -1,5 +1,3 @@
-/*facem vizibil iconul de hamburger meniu*/
-
 
 #HamburgerMenu{
     
@@ -7,7 +5,6 @@
     width: auto;
 }
 
-/* implicit meniul e ascuns*/
 nav ul.meniu{
     display:none;
     position:absolute;
@@ -26,7 +23,6 @@ nav{
 }
 
 
-/*aici facem vizibil meniul cand faem click pe hamburger meniu*/
 #chbox:checked+ul.meniu{
     display: block;
     z-index: 5;
@@ -44,12 +40,10 @@ nav{
     position: relative;
 }
 
-/*optiunile se intind pe toata latimea containerului*/
 nav ul.meniu li{
     width:100%;
 }
 
-/*meniul sa vina deasupra continutul de mai jos, fara sa impinga continutul*/
 nav ul.meniu>li ul{
     position:absolute;
     width:100%;
@@ -68,7 +62,7 @@ nav ul.meniu>li:hover>ul{
 }
 
 
-/* pentru fiecare element din submeniu generam un triunghiulet alb inaintea lui*/
+
 nav ul.meniu>li li a:before{
     content:" \25B7\00A0	";
     color:white;

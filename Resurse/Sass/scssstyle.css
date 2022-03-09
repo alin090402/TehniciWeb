@@ -1,0 +1,167 @@
+html {
+  font-family: "Hubballi", cursive;
+  font-size: 20px;
+}
+
+header {
+  position: relative;
+}
+
+body {
+  background-color: #CDE6FF;
+}
+
+#container {
+  margin-top: 3em;
+  display: grid;
+  grid-template-areas: "p1 p1 p1 p1" "p3 p2 p2 p4" "p8 p8 p8 p8" "p7 p7 p5 p6";
+  grid-gap: 1rem;
+}
+#container > * {
+  z-index: 0;
+  border: 0.3em solid black;
+  border-radius: 3%;
+  padding: 1.5rem;
+}
+
+div #p1 {
+  grid-area: p1;
+}
+div #p2 {
+  grid-area: p2;
+}
+div #p3 {
+  grid-area: p3;
+}
+div #p4 {
+  grid-area: p4;
+}
+div #p5 {
+  grid-area: p5;
+}
+div #p6 {
+  grid-area: p6;
+}
+div #p7 {
+  grid-area: p7;
+}
+div #p8 {
+  grid-area: p8;
+}
+div .Iframe {
+  display: flex;
+  flex-direction: row;
+}
+div .Iframe iframe {
+  border: 1em solid var(--primaryColor);
+  display: block;
+  width: 30rem;
+  height: 15rem;
+}
+div .Taburi {
+  display: flex;
+  flex-direction: column;
+}
+div .Taburi a {
+  border-top-left-radius: 10%;
+  border-bottom-left-radius: 10%;
+  display: block;
+  border: 2px solid #2A8C9C;
+  border-right: 0;
+  width: 9rem;
+  height: 3rem;
+  text-align: center;
+  line-height: 3rem;
+  background-color: var(--lighter);
+  color: black;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+div .Taburi a:hover {
+  background-color: #3BC7DB;
+}
+
+#top {
+  display: flex;
+  position: fixed;
+  bottom: 5em;
+  right: 5em;
+  width: 3em;
+  height: 3em;
+  z-index: 2;
+  border-radius: 40%;
+  border-left: 0.5em solid rgba(0, 0, 0, 0.5);
+  border-right: 0.5em solid rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
+}
+#top > div {
+  margin: auto;
+  position: relative;
+  border-bottom: 1em solid transparent;
+  border-top: 0px solid transparent;
+  border-left: 1em solid #CDE6FF;
+  border-right: 1em solid #CDE6FF;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-clip: border-box;
+  padding: 0;
+  width: 0;
+  box-sizing: border-box;
+}
+#top:hover {
+  border-left: 0.5em solid black;
+  border-right: 0.5em solid black;
+}
+#top:hover > div {
+  margin-top: 0.5em;
+  background-color: #2A8C9C;
+  animation-name: animatieSageata;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+
+@keyframes animatieSageata {
+  0% {
+    opacity: 0.5;
+    transform: translate(0, 0.5em);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+footer {
+  border: 0.3rem solid black;
+  border-radius: 3%;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+@media only screen and (max-width: 1100px) {
+  :root {
+    --fontsize: 16px;
+  }
+
+  #container {
+    display: grid;
+    grid-template-areas: "p1 p1 p1" "p3 p2 p2 " "p4 p4 p5" "p8 p8 p8" "p7 p7 p6";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 1em;
+  }
+}
+@media only screen and (max-width: 700px) {
+  :root {
+    --fontsize: 12px;
+  }
+
+  #container {
+    display: grid;
+    grid-template-areas: "p1" "p2" "p3" "p4" "p5" "p6" "p7" "p8";
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, 1fr);
+    grid-gap: 1em;
+  }
+}
+
+/*# sourceMappingURL=scssstyle.css.map */

@@ -1,0 +1,115 @@
+nav {
+  position: sticky;
+  opacity: 100%;
+  z-index: 5;
+  font-size: 20px;
+  width: 100%;
+  height: 2em;
+  left: 0;
+  top: 0;
+  display: flex;
+  background-color: #3FD1E8;
+}
+nav * {
+  font-size: 20px;
+  font-style: normal;
+  text-decoration: none;
+  color: black;
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  text-decoration: none;
+  color: black;
+  margin: 0;
+  padding: 0;
+}
+nav ul.meniu {
+  display: flex;
+  list-style: none;
+  height: 2em;
+  width: 100%;
+}
+nav ul.meniu > li {
+  height: 2em;
+  background-color: #3FD1E8;
+}
+nav ul.meniu > li:hover {
+  height: 2em;
+}
+nav ul.meniu > li:hover ul.submeniu {
+  visibility: visible;
+  visibility: visible;
+  transform-origin: 50% 0;
+  animation-name: a_submeniu;
+  animation-iteration-count: 1;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+nav ul.meniu > li:hover span {
+  color: white;
+}
+nav ul.meniu > li > a {
+  padding: 0.3em;
+  display: block;
+}
+nav ul.meniu li a {
+  display: block;
+  color: black;
+  transition: color 0.5s;
+  background-color: #3FD1E8;
+}
+nav ul.meniu li a:hover {
+  color: white;
+}
+nav ul.submeniu {
+  position: relative;
+  visibility: hidden;
+  display: block;
+  list-style: none;
+  width: 10em;
+  margin: 0;
+  padding: 0;
+  z-index: 10;
+}
+nav ul.submeniu li {
+  display: block;
+  height: 2em;
+  background-color: #3FD1E8;
+  z-index: 10;
+}
+nav ul.submeniu li > a {
+  padding: 0.3em;
+}
+
+span.HomeButton {
+  color: #3FD1E8;
+  transition: color 0.5s;
+}
+
+#HamburgerMenu {
+  margin-left: 1em;
+  margin-right: auto;
+  display: none;
+  height: 2em;
+}
+#HamburgerMenu img {
+  height: 2em;
+}
+
+#chbox {
+  display: none;
+}
+
+@keyframes a_submeniu {
+  0% {
+    opacity: 0.5;
+    transform: scale(0.5, 0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+}
+
+/*# sourceMappingURL=scssnav.css.map */

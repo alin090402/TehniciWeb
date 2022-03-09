@@ -42,7 +42,7 @@ nav ul.meniu{
 span.HomeButton
 {
     color: var(--lighter);
-    transition: inherit;
+    transition: color 0.5s;
 }
 
 
