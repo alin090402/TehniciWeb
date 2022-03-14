@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+        <title>Libraria mea</title>
+        <meta name = "description" content = "Libraria mea ofera diverse tipuri de carti pentru cititori.">
+        <meta name = "author" content = "Sava Constantin-Alin">
+        <meta name = "keywords" content = "carti, carte, citit, librarie, cumparat, aventura, istorie, fantasy">
+        
+        <%- include("../Fragmente/head.ejs")  %>
+        
+    </head>
+
+    <body>
+        
+        <%- include("../Fragmente/header.ejs")  %>
+
+        <main>
+            <div id = "container"> 
+                <div id = "p1">
+                    <h1>Libraria mea</h1>
+                <section id = "BunVenit">
+                    <h2>Bun Venit</h2>
+                    <q>Un cititor trăieşte o mie de vieţi. Cel ce nu citeşte trăieşte una singură.</q>
+                    <p>Bun venit pe siteul meu dragut.De aici te poti preface ca o sa cumperi carti.</p>
+                    <p>Niste filmulete cu diverse carti pentru cititorii adevarati:</p>
+                    <div class = "Iframe">
+                        <div class = "Taburi">
+                            <a href="https://www.youtube.com/embed/NQXooN0Qvew" target="iframeVideo">Primul link</a>
+                            <br>
+                            <a href="https://www.youtube.com/embed/ZFB6UOldPMA" target=iframeVideo>Al doilea link</a>
+                            <br>
+                        </div>
+                        <iframe src="https://www.youtube.com/embed/ZFB6UOldPMA" name="iframeVideo"></iframe>
+                    </div>
+                    <!--
+                    <figure>
+                        <img sizes="(min-width:600px) 640px, (min-width:300px) 320px, 160px"
+                            srcset="Resurse/Imagini/numeleTrandafirului_mare.jpg 640h, Resurse/Imagini/numeleTrandafirului_mare.jpg 320h, Resurse/Imagini/numeleTrandafirului_medie.jpg 160h"
+                            src="Resurse/Imagini/numeleTrandafirului_mica.jpg"
+                            alt="poza cu cartea numele trandafirului">
+                        <figcaption>Cartea numele trandafirului</figcaption>
+                    </figure>
+                    -->
+                </section>
+                
+                </div>
+                <div id = "p2">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dapibus pulvinar orci ac eleifend. Phasellus placerat nisl justo, ut molestie ipsum ultrices egestas. Praesent rutrum enim id elit finibus, et mattis mauris feugiat. Ut et arcu luctus, euismod est quis, pellentesque sem. Sed commodo ante at imperdiet egestas. Aliquam elit tortor, posuere fermentum sagittis et, faucibus sed risus. Pellentesque nec metus sed libero lobortis porttitor sit amet a neque. Donec elit nulla, hendrerit nec luctus sit amet, vestibulum quis urna.</p>
+                </div>
+                <div id = "p3">
+                    <p>Vestibulum cursus, dui faucibus feugiat luctus, quam neque laoreet leo, ac blandit justo quam non odio. Phasellus hendrerit rhoncus ex, quis consectetur augue ornare quis. Maecenas sit amet auctor est. Nullam eleifend orci enim, id rutrum lorem rhoncus id. Nunc a massa et ligula congue ultrices. Aliquam quis lectus quis nisi euismod venenatis sit amet sed dui. Aliquam commodo tellus id scelerisque feugiat.</p>
+                </div>
+                <div id = "p4">
+                    
+                    <section id = "OferteSpeciale">
+                    <h2>Oferte <i class="fa-solid fa-book"></i></h2>
+                    <p><strong>Nu uitati. </strong>Transportul este gratuit doar pentru comenzi peste 50RON.</p>
+                    <p>Oferta irezistibila: 20% reducere la cartile de istorie scrise in anul 2020</p>
+                    <p>Nu rata aceasta oferta uimitoare, la achizitia unei carti de filozofie primeste de asemenea si o carte de colorat gratis.</p>
+                        <p>De neratat! Doar azi poti obtine faimoasa carte "Misterul lui Dean" la uimitorul pret de doar<s>20 RON</s> <ins>15 RON</ins>  </p>
+                    
+                    </section>
+                </div>
+                <div id = "p5">
+                    <p>Nunc pulvinar mollis mauris et mollis. Nunc eget gravida elit. Nulla molestie tempus quam eu fermentum. Morbi ultrices enim ligula, a faucibus dui dapibus vitae. In tristique hendrerit leo, ac varius sapien feugiat eget. Integer non aliquet dolor. Pellentesque quis porttitor sem. Nunc porta massa ut magna scelerisque, et consequat magna cursus. Aliquam iaculis, nisi id efficitur mollis, elit nisl scelerisque erat, eget commodo quam est ac dolor.</p>
+                </div>
+                <div id = "p6">
+                    <p>Sed facilisis odio quam, sed suscipit ipsum pulvinar eget. Vestibulum eu dolor elit. Phasellus iaculis eros ex, eu cursus nisl euismod eget. Sed lacinia, quam non fringilla tempor, ante risus pulvinar nunc, ornare tincidunt sem sem eu risus. Vestibulum sed venenatis neque. Cras mollis neque magna, eu mattis ligula viverra ac. Vestibulum fermentum mi ac auctor consequat.</p>
+                </div>
+                <div id = "p7">
+                    <p>Vestibulum tincidunt sed tellus id sollicitudin. Vivamus porttitor congue libero viverra suscipit. Cras nec magna non diam pulvinar tincidunt at id mi. In ut tortor erat. Fusce auctor lacus felis, quis egestas lorem fringilla sit amet. Curabitur ut ex id dui blandit pharetra at eget est. Fusce nisl nunc, accumsan quis pretium vitae, viverra eget magna. Aliquam cursus, mi semper luctus tempor, tortor ligula commodo tortor, et pellentesque eros lacus sit amet erat. Praesent aliquet, quam in lacinia tempus, massa dui semper dolor, at elementum leo tellus non sem. Nulla eget velit fringilla, sollicitudin mi ac, vehicula sem. Donec non commodo lorem. Integer eu varius est, at lacinia magna. Mauris sed nibh ex. Donec erat mi, molestie a quam non, volutpat sodales sem. Vivamus nec ex in magna consectetur venenatis ut ut mi. Praesent vestibulum, quam cursus tempus aliquam, turpis dolor suscipit mauris, et vulputate magna eros quis nisi.</p>
+                </div>
+                <div id = "p8">
+                    <section id = "Prezentare">
+                        <h2>Aceasta este prezentarea librariei mele online. Acest site este dezvoltat de catre mine ca proiect la <abbr title="Tehnici Web">T.W.</abbr></h2>
+                        <aside>
+                            <h3><a href="https://fmi.unibuc.ro/" target="_blank">Link</a> catre siteul facultatii la care invat:</h3>
+                                
+                        </aside><br>
+                    </section> 
+                    
+                    <section id = "IntrebariFrecvente">
+                        <h2>Intrebari Frecvente</h2>
+                        <details> 
+                            <summary><h3>Cine a dezvoltat acest site minunat?</h3></summary>
+                        
+                            <p>Dezvoltatorul acestui site prefera sa isi pastreze identitatea secreta.</p>
+                        </details>
+                       <details>
+                            <summary><h3>Chiar pot cumpara carti de pe acest site?</h3></summary>
+                           <p>Din pacate acest site are doar rol educational, totusi ai putea folosi alte librarii online pentru achizitia de carti</p>
+                        </details>
+                        
+                        <details>
+                            <summary><h3>Exista o metoda de a cauta mai usor numele unei carti?</h3></summary>
+                            <p>Din pacate siteul este abia la inceput asa ca nu are implementat un motor de cautare inca.</p>
+                        </details>
+                        
+                        
+                        
+                    </section>
+    
+                    <section id = "Orar">
+                        <h2>Deschis 24/24</h2>
+                    </section>
+                </div>
+
+                
+            </div>
+        </main>
+        
+        <%- include("../Fragmente/footer.ejs")  %> 
+
+        
+    </body>
+
+
+
+</html>
