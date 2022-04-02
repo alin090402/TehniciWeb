@@ -1,0 +1,98 @@
+{
+	"cale_galerie":"resurse/resurse/imagini/galerie",
+	"imagini": [
+		{
+			"fisier":"briose-frisca.png",
+			"descriere":"Brioșe",
+			"sfert_ora": 2
+		},
+		{
+			"fisier":"clatite.png",
+			"descriere":"Clătite cu dulceață",
+			"sfert_ora": 3
+		},
+		{
+			"fisier":"gogosi.png",
+			"descriere":"Gogoși glazurate",
+			"sfert_ora": 4
+		},
+		{
+			"fisier":"tort-scortisoara.png",
+			"descriere":"Tort cu scorțisoară",
+			"sfert_ora": 1
+		},
+		{
+			"fisier":"prajitura-ciocolata.png",
+			"descriere":"Prăjitură cu ciocolată",
+			"sfert_ora": 1
+		},
+		{
+			"fisier":"tarta-afine.png",
+			"descriere":"Tartă cu afine",
+			"sfert_ora": 1
+		},{
+			"fisier":"briose-frisca.png",
+			"descriere":"Brioșe",
+			"sfert_ora": 2
+		},
+		{
+			"fisier":"clatite.png",
+			"descriere":"Clătite cu dulceață",
+			"sfert_ora": 3
+		},
+		{
+			"fisier":"gogosi.png",
+			"descriere":"Gogoși glazurate",
+			"sfert_ora": 4
+		},
+		{
+			"fisier":"tort-scortisoara.png",
+			"descriere":"Tort cu scorțisoară",
+			"sfert_ora": 1
+		},
+		{
+			"fisier":"prajitura-ciocolata.png",
+			"descriere":"Prăjitură cu ciocolată",
+			"sfert_ora": 1
+		},
+		{
+			"fisier":"tarta-afine.png",
+			"descriere":"Tartă cu afine",
+			"sfert_ora": 1
+		},{
+			"fisier":"briose-frisca.png",
+			"descriere":"Brioșe",
+			"sfert_ora": 2
+		},
+		{
+			"fisier":"clatite.png",
+			"descriere":"Clătite cu dulceață",
+			"sfert_ora": 3
+		},
+		{
+			"fisier":"gogosi.png",
+			"descriere":"Gogoși glazurate",
+			"sfert_ora": 4
+		},
+		{
+			"fisier":"tort-scortisoara.png",
+			"descriere":"Tort cu scorțisoară",
+			"sfert_ora": 1
+		},
+		{
+			"fisier":"prajitura-ciocolata.png",
+			"descriere":"Prăjitură cu ciocolată",
+			"sfert_ora": 1
+		},
+		{
+			"fisier":"tarta-afine.png",
+			"descriere":"Tartă cu afine",
+			"sfert_ora": 1
+		},
+		{
+			"fisier":"tort-trandafiri.png",
+			"descriere":"Tort special",
+			"sfert_ora": 1
+		}
+	]
+}

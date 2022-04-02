@@ -1,0 +1,173 @@
+#tabel td, #tabel th{
+    border: 2px solid black;
+}
+#tabel tbody tr:nth-child(1){
+    border-top: 5px solid black; 
+}
+#tabel tbody tr:last-child{
+    border-bottom: 5px solid black;
+}
+
+#tabel{
+    caption-side: bottom;
+    border-spacing: 0;
+}
+#tabel tbody td:nth-child(odd){
+    border-right-color: pink;
+    border-left-color: aqua;
+}
+#tabel tbody td:nth-child(even){
+    border-right-color: aqua;
+    border-left-color: pink;
+}
+
+#tabel tbody tr:hover{
+    box-shadow: 0 0 5px black;
+}
+#tabel tbody tr:hover{
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+}
+
+@media only screen and (max-width: 700px) {
+    #p2{
+        overflow-x: scroll;
+    }
+
+
+}
+
+#galerie_statica{
+    grid-template-areas: 
+                    "picture1 picture2 picture3"
+                    "picture4 .        picture5"
+                    "picture6 .        picture7"
+                    "picture8 picture9 picture10";
+    counter-reset: nrimag 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+#galerie_statica div.figure{
+    display: flex;
+    height: 20rem;
+}
+#galerie_statica figure{
+    margin: auto;
+}
+#galerie_statica figure img{
+    width: 16rem;
+    height: 12rem;
+    transition-duration: 1.2s;
+    transition-timing-function: linear;
+    border: 0px;
+}
+
+
+#galerie_statica figure:hover img{
+    width: 20rem;
+    height: 15rem;
+    border: 4px solid black;
+
+}
+
+#galerie_statica div:nth-child(1){
+    grid-area: picture1;
+}
+#galerie_statica div:nth-child(2){
+    grid-area: picture2;
+}
+#galerie_statica div:nth-child(3){
+    grid-area: picture3;
+}
+#galerie_statica div:nth-child(4){
+    grid-area: picture4;
+}
+#galerie_statica div:nth-child(5){
+    grid-area: picture5;
+}
+#galerie_statica div:nth-child(6){
+    grid-area: picture6;
+}
+#galerie_statica div:nth-child(7){
+    grid-area: picture7;
+}
+#galerie_statica div:nth-child(8){
+    grid-area: picture8;
+}
+#galerie_statica div:nth-child(9){
+    grid-area: picture9;
+}
+#galerie_statica div:nth-child(10){
+    grid-area: picture10;
+}
+
+
+#galerie_statica figcaption{
+    counter-increment: nrimag 1;
+    
+}
+#galerie_statica figcaption::before{
+    content: counter(nrimag, upper-roman) ". ";
+
+}
+
+
+
+
+::cue{
+    background-color: rgba(255, 255, 255, 0.3);
+    color: blue;
+}
+
+
+
+
+#hr::after{
+    content: "\1F56E";
+    margin-right: auto;
+}
+  
+#hr::before{
+    content: "\1F56E";
+    margin-left: auto;
+  }
+
+hr{
+    width: 80%;
+    margin: auto;
+    border-top: 3px solid black;
+}
+
+#hr{
+    color: var(--darker);
+    font-size: 1.5em;
+    display: flex;
+    width: 100%;
+}
+
+@media only screen and (max-width: 1100px) {
+    #galerie_statica{
+        grid-template-areas: 
+                            "picture1 picture2"
+                            "picture3 picture4"
+                            "picture5 picture6"
+                            "picture7 picture8"
+                            "picture9 picture10";
+    }
+  }
+  @media only screen and (max-width: 700px) {
+    #galerie_statica{
+        grid-template-areas: 
+                            "picture1"
+                            "picture2"
+                            "picture3"
+                            "picture4"
+                            "picture5"
+                            "picture6"
+                            "picture7"
+                            "picture8"
+                            "picture9"
+                            "picture10";
+    }
+  }

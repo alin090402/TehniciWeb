@@ -10,8 +10,11 @@ header {
 body {
   background-color: #CDE6FF;
 }
-
+#watermark{
+  display: none;
+}
 #container {
+  width: 100%;
   margin-top: 3em;
   display: grid;
   grid-template-areas: "p1 p1 p1 p1" "p3 p2 p2 p4" "p8 p8 p8 p8" "p7 p7 p5 p6";
@@ -75,10 +78,13 @@ div .Taburi a {
   background-color: var(--lighter);
   color: black;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 0.8rem;
+  transition-timing-function: linear;
+  transition-duration: 0.7s;
 }
 div .Taburi a:hover {
   background-color: #3BC7DB;
+  color:black;
 }
 
 #top {
@@ -146,7 +152,6 @@ footer {
     display: grid;
     grid-template-areas: "p1 p1 p1" "p3 p2 p2 " "p4 p4 p5" "p8 p8 p8" "p7 p7 p6";
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 1em;
   }
 }
@@ -159,7 +164,6 @@ footer {
     display: grid;
     grid-template-areas: "p1" "p2" "p3" "p4" "p5" "p6" "p7" "p8";
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(8, 1fr);
     grid-gap: 1em;
   }
 }

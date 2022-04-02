@@ -25,14 +25,51 @@
                     <p>Niste filmulete cu diverse carti pentru cititorii adevarati:</p>
                     <div class = "Iframe">
                         <div class = "Taburi">
-                            <a href="https://www.youtube.com/embed/NQXooN0Qvew" target="iframeVideo">Primul link</a>
+                            <a href="https://www.youtube.com/embed/NQXooN0Qvew" target="iframeVideo">Carti ce trebuie citite</a>
                             <br>
-                            <a href="https://www.youtube.com/embed/ZFB6UOldPMA" target=iframeVideo>Al doilea link</a>
+                            <a href="https://www.youtube.com/embed/ZFB6UOldPMA" target=iframeVideo>Carti ce lasa o amprenta</a>
                             <br>
                         </div>
                         <iframe src="https://www.youtube.com/embed/ZFB6UOldPMA" name="iframeVideo"></iframe>
                     </div>
+
+                    <video width="320" height="240" controls="controls" poster="/Resurse/Imagini/video_tumbnail.jpg" preload="metadata">
+                        <source src="/Resurse/Video/Prezentare_carte.mp4" type="video/mp4">
+                        <source src="/Resurse/Video/Prezentare_carte.ogv" type="video/ogv">
+                        <track default src="/Resurse/Video/Tracks/mesaje_ro.vtt" kind="captions" srclang="ro" label="romana" />
+                        <track  src="/Resurse/Video/Tracks/mesaje_en.vtt" kind="captions" srclang="en" label="engleza" />
+                    </video>
+                    
+                    <div id="galerie_statica">   
+                        <% for (let imag of locals.imagini){ %>
+                            <div class = "figure">
+                                <figure>
+                                    <picture>
+                                        <source srcset="<%- imag.mic%>" media="(max-width:800px)" />
+                                        <source srcset="<%- imag.mediu%>" media="(max-width:1200px)" />
+                                        <img src="<%- imag.mare%>" alt="<%- imag.alt || imag.titlu  %> " />
+                                    </picture>
+                                    <figcaption><%- imag.descriere%></figcaption>
+                                </figure>
+                            </div>
+                        <% } %>
+                               
+                    </div> 
+
                     <!--
+                    <div id="galerie_animata">   
+                        <% for (let imag of locals.imagini){ %>
+                            <figure>
+                                <picture>
+                                    <source srcset="<%- imag.mic%>" media="(max-width:800px)" />
+                                    <source srcset="<%- imag.mediu%>" media="(max-width:1200px)" />
+                                    <img src="<%- imag.mare%>" alt="text alternativ" />
+                                </picture>
+                                <figcaption><%- imag.descriere%></figcaption>
+                            </figure>
+                        <% } %>
+                               
+                    </div> 
                     <figure>
                         <img sizes="(min-width:600px) 640px, (min-width:300px) 320px, 160px"
                             srcset="Resurse/Imagini/numeleTrandafirului_mare.jpg 640h, Resurse/Imagini/numeleTrandafirului_mare.jpg 320h, Resurse/Imagini/numeleTrandafirului_medie.jpg 160h"
@@ -45,7 +82,65 @@
                 
                 </div>
                 <div id = "p2">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dapibus pulvinar orci ac eleifend. Phasellus placerat nisl justo, ut molestie ipsum ultrices egestas. Praesent rutrum enim id elit finibus, et mattis mauris feugiat. Ut et arcu luctus, euismod est quis, pellentesque sem. Sed commodo ante at imperdiet egestas. Aliquam elit tortor, posuere fermentum sagittis et, faucibus sed risus. Pellentesque nec metus sed libero lobortis porttitor sit amet a neque. Donec elit nulla, hendrerit nec luctus sit amet, vestibulum quis urna.</p>
+                    <table  id = "tabel">
+                        <thead>
+    
+                            <tr>
+                                <th rowspan="2">Zi</th>
+                                <th colspan="2">Autori clasici</th>
+                                <th colspan="2">Autori contemporani</th>
+                            </tr>
+                            <tr>
+                                
+                                <th>Mihai Eminescu</th>
+                                <th>Miercea Eliade</th>
+                                <th>Mircea Cartarescu</th>
+                                <th>Dan lungu</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Luni</td>
+                                <td>10-12</td>
+                                <td>12-14</td>
+                                <td>14-16</td>
+                                <td>16-18</td>
+                            </tr>
+                            <tr>
+                                
+                                <td>Marti</td>
+                                <td>9-11</td>
+                                <td>11-13</td>
+                                <td>13-15</td>
+                                <td>15-17</td>
+                            </tr>
+                            <tr>
+                                
+                                <td>Miercuri</td>
+                                <td>18-20</td>
+                                <td>16-18</td>
+                                <td>10-12</td>
+                                <td>13-15</td>
+                            </tr>
+                            <tr>
+                                
+                                <td>Joi</td>
+                                <td>9-11</td>
+                                <td>11-13</td>
+                                <td>14-16</td>
+                                <td>17-19</td>
+                            </tr>
+                            <tr>
+                                
+                                <td>Vineri</td>
+                                <td>9-12</td>
+                                <td>12-14</td>
+                                <td>14-16</td>
+                                <td>17-19</td>
+                            </tr>
+                        </tbody>
+                        <caption>Orar prezentari carte</caption>
+                    </table> 
                 </div>
                 <div id = "p3">
                     <p>Vestibulum cursus, dui faucibus feugiat luctus, quam neque laoreet leo, ac blandit justo quam non odio. Phasellus hendrerit rhoncus ex, quis consectetur augue ornare quis. Maecenas sit amet auctor est. Nullam eleifend orci enim, id rutrum lorem rhoncus id. Nunc a massa et ligula congue ultrices. Aliquam quis lectus quis nisi euismod venenatis sit amet sed dui. Aliquam commodo tellus id scelerisque feugiat.</p>
@@ -78,7 +173,7 @@
                                 
                         </aside><br>
                     </section> 
-                    
+                    <div id = "hr"><hr></div>
                     <section id = "IntrebariFrecvente">
                         <h2>Intrebari Frecvente</h2>
                         <details> 

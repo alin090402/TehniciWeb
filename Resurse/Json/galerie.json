@@ -1,0 +1,290 @@
+{
+	"cale_galerie":"resurse/imagini/galerie",
+	"imagini": [
+		{
+			"fisier":"reading1.jpg",
+            "titlu":"reading1",
+			"descriere":"reading1",
+			"sfert_ora": 2
+		},
+		{
+			"fisier":"reading2.jpg",
+            "titlu":"reading2",
+			"descriere":"reading2",
+			"sfert_ora": 1
+		},
+        {
+			"fisier":"reading3.jpg",
+            "titlu":"reading3",
+			"descriere":"reading3",
+			"sfert_ora": 3
+		},
+        {
+			"fisier":"reading4.jpg",
+            "titlu":"reading4",
+			"descriere":"reading4",
+			"sfert_ora": 4
+		},
+        {
+			"fisier":"reading5.jpg",
+            "titlu":"reading5",
+			"descriere":"reading5",
+			"sfert_ora": 2
+		},
+		{
+			"fisier":"reading6.jpg",
+            "titlu":"reading6",
+			"descriere":"reading6",
+			"sfert_ora": 1
+		},
+        {
+			"fisier":"reading7.jpg",
+            "titlu":"reading7",
+			"descriere":"reading7",
+			"sfert_ora": 3
+		},
+        {
+			"fisier":"reading8.jpg",
+            "titlu":"reading8",
+			"descriere":"reading8",
+			"sfert_ora": 4
+		},
+        {
+			"fisier":"reading9.jpg",
+            "titlu":"reading9",
+			"descriere":"reading9",
+			"sfert_ora": 2
+		},
+		{
+			"fisier":"reading10.jpg",
+            "titlu":"reading10",
+			"descriere":"reading10",
+			"sfert_ora": 1
+		},
+        {
+			"fisier":"reading11.jpg",
+            "titlu":"reading11",
+			"descriere":"reading11",
+			"sfert_ora": 3
+		},
+        {
+			"fisier":"reading12.jpg",
+            "titlu":"reading12",
+			"descriere":"reading12",
+			"sfert_ora": 4
+		},{
+			"fisier":"reading1.jpg",
+            "titlu":"reading1",
+			"descriere":"reading1",
+			"sfert_ora": 2
+		},
+		{
+			"fisier":"reading2.jpg",
+            "titlu":"reading2",
+			"descriere":"reading2",
+			"sfert_ora": 1
+		},
+        {
+			"fisier":"reading3.jpg",
+            "titlu":"reading3",
+			"descriere":"reading3",
+			"sfert_ora": 3
+		},
+        {
+			"fisier":"reading4.jpg",
+            "titlu":"reading4",
+			"descriere":"reading4",
+			"sfert_ora": 4
+		},
+        {
+			"fisier":"reading5.jpg",
+            "titlu":"reading5",
+			"descriere":"reading5",
+			"sfert_ora": 2
+		},
+		{
+			"fisier":"reading6.jpg",
+            "titlu":"reading6",
+			"descriere":"reading6",
+			"sfert_ora": 1
+		},
+        {
+			"fisier":"reading7.jpg",
+            "titlu":"reading7",
+			"descriere":"reading7",
+			"sfert_ora": 3
+		},
+        {
+			"fisier":"reading8.jpg",
+            "titlu":"reading8",
+			"descriere":"reading8",
+			"sfert_ora": 4
+		},
+        {
+			"fisier":"reading9.jpg",
+            "titlu":"reading9",
+			"descriere":"reading9",
+			"sfert_ora": 2
+		},
+		{
+			"fisier":"reading10.jpg",
+            "titlu":"reading10",
+			"descriere":"reading10",
+			"sfert_ora": 1
+		},
+        {
+			"fisier":"reading11.jpg",
+            "titlu":"reading11",
+			"descriere":"reading11",
+			"sfert_ora": 3
+		},
+        {
+			"fisier":"reading12.jpg",
+            "titlu":"reading12",
+			"descriere":"reading12",
+			"sfert_ora": 4
+		},{
+			"fisier":"reading1.jpg",
+            "titlu":"reading1",
+			"descriere":"reading1",
+			"sfert_ora": 2
+		},
+		{
+			"fisier":"reading2.jpg",
+            "titlu":"reading2",
+			"descriere":"reading2",
+			"sfert_ora": 1
+		},
+        {
+			"fisier":"reading3.jpg",
+            "titlu":"reading3",
+			"descriere":"reading3",
+			"sfert_ora": 3
+		},
+        {
+			"fisier":"reading4.jpg",
+            "titlu":"reading4",
+			"descriere":"reading4",
+			"sfert_ora": 4
+		},
+        {
+			"fisier":"reading5.jpg",
+            "titlu":"reading5",
+			"descriere":"reading5",
+			"sfert_ora": 2
+		},
+		{
+			"fisier":"reading6.jpg",
+            "titlu":"reading6",
+			"descriere":"reading6",
+			"sfert_ora": 1
+		},
+        {
+			"fisier":"reading7.jpg",
+            "titlu":"reading7",
+			"descriere":"reading7",
+			"sfert_ora": 3
+		},
+        {
+			"fisier":"reading8.jpg",
+            "titlu":"reading8",
+			"descriere":"reading8",
+			"sfert_ora": 4
+		},
+        {
+			"fisier":"reading9.jpg",
+            "titlu":"reading9",
+			"descriere":"reading9",
+			"sfert_ora": 2
+		},
+		{
+			"fisier":"reading10.jpg",
+            "titlu":"reading10",
+			"descriere":"reading10",
+			"sfert_ora": 1
+		},
+        {
+			"fisier":"reading11.jpg",
+            "titlu":"reading11",
+			"descriere":"reading11",
+			"sfert_ora": 3
+		},
+        {
+			"fisier":"reading12.jpg",
+            "titlu":"reading12",
+			"descriere":"reading12",
+			"sfert_ora": 4
+		},{
+			"fisier":"reading1.jpg",
+            "titlu":"reading1",
+			"descriere":"reading1",
+			"sfert_ora": 2
+		},
+		{
+			"fisier":"reading2.jpg",
+            "titlu":"reading2",
+			"descriere":"reading2",
+			"sfert_ora": 1
+		},
+        {
+			"fisier":"reading3.jpg",
+            "titlu":"reading3",
+			"descriere":"reading3",
+			"sfert_ora": 3
+		},
+        {
+			"fisier":"reading4.jpg",
+            "titlu":"reading4",
+			"descriere":"reading4",
+			"sfert_ora": 4
+		},
+        {
+			"fisier":"reading5.jpg",
+            "titlu":"reading5",
+			"descriere":"reading5",
+			"sfert_ora": 2
+		},
+		{
+			"fisier":"reading6.jpg",
+            "titlu":"reading6",
+			"descriere":"reading6",
+			"sfert_ora": 1
+		},
+        {
+			"fisier":"reading7.jpg",
+            "titlu":"reading7",
+			"descriere":"reading7",
+			"sfert_ora": 3
+		},
+        {
+			"fisier":"reading8.jpg",
+            "titlu":"reading8",
+			"descriere":"reading8",
+			"sfert_ora": 4
+		},
+        {
+			"fisier":"reading9.jpg",
+            "titlu":"reading9",
+			"descriere":"reading9",
+			"sfert_ora": 2
+		},
+		{
+			"fisier":"reading10.jpg",
+            "titlu":"reading10",
+			"descriere":"reading10",
+			"sfert_ora": 1
+		},
+        {
+			"fisier":"reading11.jpg",
+            "titlu":"reading11",
+			"descriere":"reading11",
+			"sfert_ora": 3
+		},
+        {
+			"fisier":"reading12.jpg",
+            "titlu":"reading12",
+			"descriere":"reading12",
+			"sfert_ora": 4
+		}
+	]
+}
