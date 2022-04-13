@@ -1,0 +1,25 @@
+{
+    "cale_baza": "resurse/imagini/erori",
+    "erori": [
+        {
+            "identificator":404,
+            "titlu":"404 - Page not found",
+            "text": "Pagina nu exista pe acest server",
+            "imagine":"eroare404.png"
+        },
+        {
+            "identificator":403,
+            "titlu":"404 - Da, tu ce cauți aici?!!",
+            "text": "Ai greșit ruta. Stânga-împrejur și pa!",
+            "imagine":"interzis.png"
+        },
+        
+        {
+            "identificator":1,
+            "titlu":"Site în lucru",
+            "text": "Muncim, muncim!",
+            "imagine":"interzis.png"
+        }
+    ]
+  }
+  

@@ -119,7 +119,7 @@ div .Taburi a:hover {
 }
 #top:hover > div {
   margin-top: 0.5em;
-  background-color: #2A8C9C;
+  background-color: #2a8d9c00;
   animation-name: animatieSageata;
   animation-duration: 0.5s;
   animation-iteration-count: 1;

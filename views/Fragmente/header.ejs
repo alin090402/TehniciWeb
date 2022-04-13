@@ -1,11 +1,19 @@
 
 <p id="watermark">Sava <br> Constantin-Alin</p>
+<script>
+    var tema = localStorage.getItem("tema");
+    if (tema)
+        document.body.classList.add(tema);
+    else 
+        document.body.classList.remove("dark");
+</script>
 <header>
     <div id = "container_banner">
         <div id = "banner">
             <h1>NUMELE SITEULUI MEU FRUMOS</h1>
             <p>Ip-ul tau este: <%- locals.ip %> </p>
             <%- locals.imagini %>
+            <p><button id = "buttonTema">Schimbare tema</button></p>
 
         </div>
     </div>

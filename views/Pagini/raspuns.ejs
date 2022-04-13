@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+          <meta name = "description" content = "Libraria mea ofera diverse tipuri de carti pentru cititori.">
+        <meta name = "author" content = "Sava Constantin-Alin">
+        <meta name = "keywords" content = "locatie, harta, mail, telefon">
+        <%-
+            include("../Fragmente/head.ejs");
+        %>
+
+        
+    </head>
+
+    <body>
+        <%- include("../Fragmente/header.ejs"); %> 
+        <main>
+            <% for(int i = 0; i < locals.poze.lenght(); i++) {      
+            %> <div class = "poza">
+                    <p>
+                        <a href = "<%- locals.poze[i].cale%>>">Link</a>
+                        <form id = "<%-i%>">
+                            
+                            </form>
+                    </p>
+                </div>
+            <% } %>
+
+
+        </main>
+        <%- include("../Fragmente/footer.ejs"); %> 
+
+       
+
+        
+    </body>
+
+
+
+</html>

@@ -1,0 +1,100 @@
+/*
+#sectiune-galerie-animata{
+	padding-left: var(--padding-intern); // variabila din css-ul general
+	padding-right: var(--padding-intern);
+}
+*/
+
+$nr_img : 2* (1 + random(4)) +1;
+$proc : calc(100/$nr_img);
+$i:0;
+
+#galerie_animata{
+	width:30rem;
+	height:20rem;
+	border: 1.5rem solid transparent;
+	border-image-source: url("/resurse/imagini/border.jpg");
+	border-image-repeat: stretch;
+	border-image-width: 1.5rem;
+	border-image-slice: 75;
+	
+	position:relative;
+	overflow:hidden;
+	//margin-bottom:5rem;
+}
+#galerie_animata figcaption{
+	position:absolute;
+	bottom:0;
+	background:hsla(0, 0%, 100%, 0.3);
+	width:100%;
+	text-align:center;
+}
+#galerie_animata figure{
+	position:relative;
+	width:30rem;
+	height:20rem;
+	margin: 0;
+}
+#galerie_animata figure img{
+	width: 30rem;
+	height: 20rem;
+}
+
+
+#galerie_animata figure{	
+	position:absolute;
+	left:0;
+	top:0;
+	z-index:0;
+	animation-name: animation_#{$nr_img};
+	animation-timing-function:linear;
+	animation-iteration-count:infinite;
+	animation-fill-mode:forwards;
+	animation-duration:  $nr_img *3 +s;	
+	transform-origin:center center;
+}
+
+#galerie_animata:hover figure{
+    animation-play-state: paused;
+}
+
+
+@keyframes animation_#{$nr_img} {
+    0% {z-index: 10; opacity: 1;clip-path: none;}
+
+    //from 30% start shrink
+    #{calc(3 * $proc / 10) +"%"} {  clip-path: circle(100%);}
+
+    //from 60% start rotation and blur
+    #{ calc($proc * 6 / 10)   +"%"} {opacity: 1;transform: rotate(0deg); clip-path: circle(40%);}
+    
+    #{$proc +"%"} { z-index: 10; opacity: 0; transform: rotate(360deg); clip-path: circle(15%);}
+    #{($proc + 0.001) +"%"} {z-index: -10; clip-path: none; }
+    
+    //stay hidden till the last picture starts it's own animation
+    #{100 - $proc - 0.001 +"%"} {opacity: 0;z-index: -10; transform: rotate(0deg);}
+    #{100 - $proc +"%"} {opacity: 1;z-index: 0;}
+    100% { z-index:0; clip-path: none;}
+}
+
+@for $i from 1 through $nr_img {
+
+    $dif : $i - 1;
+    #galerie_animata figure:nth-of-type(#{$nr_img - $i + 1}){
+        animation-delay: $dif * 3 + s;
+    }
+}
+@for $i from $nr_img+1 through 13 {
+    #galerie_animata figure:nth-of-type(#{$i}){
+        display: none;
+    }
+}
+
+
+
+
+@media screen and (max-width:900px){
+	#galerie_animata{
+		display: none;
+	}
+}

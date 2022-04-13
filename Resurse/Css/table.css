@@ -171,3 +171,8 @@ hr{
                             "picture10";
     }
   }
+  body.dark
+  {
+    background-color: black;
+
+  }
