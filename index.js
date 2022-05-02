@@ -303,8 +303,8 @@ function creeazaImagini(){
 
 }
 function creeazaErori(){
-    console.log(__dirname);
-    var buf=fs.readFileSync(__dirname+"/Resurse/json/erori.json").toString("utf8");
+    console.log("Dirnameul este: ", __dirname);
+    var buf=fs.readFileSync(__dirname+"/Resurse/Json/erori.json").toString("utf8");
     obErori=JSON.parse(buf);//global
     
 }
