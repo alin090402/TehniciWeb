@@ -303,8 +303,9 @@ function creeazaImagini(){
 
 }
 function creeazaErori(){
-    //var buf=fs.readFileSync(__dirname+"/Resurse/json/erori.json").toString("utf8");
-    //obErori=JSON.parse(buf);//global
+    console.log(__dirname);
+    var buf=fs.readFileSync(__dirname+"/Resurse/json/erori.json").toString("utf8");
+    obErori=JSON.parse(buf);//global
     
 }
 
