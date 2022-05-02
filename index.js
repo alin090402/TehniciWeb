@@ -76,7 +76,7 @@ app.get("/produse", function(req, res){
             //console.log(rezQuery);
             client.query("select MIN(pret) as min, MAX(pret) as max from books", function(err, rezPret){
                 console.log("rezultata pret", rezPret.rows[0]);
-                res.render("pagini/produse", {produse: rezQuery.rows , optiuni:rezCateg.rows, pretmin:rezPret.rows[0].min, pretmax:rezPret.rows[0].max});
+                res.render("Pagini/produse", {produse: rezQuery.rows , optiuni:rezCateg.rows, pretmin:rezPret.rows[0].min, pretmax:rezPret.rows[0].max});
             })
             
         });
@@ -88,7 +88,7 @@ app.get("/produs/:id", function(req, res){
    client.query(`select * from books where id= ${req.params.id}`, function(err, rezQuery){
         console.log(err);
         //console.log(rezQuery);
-        res.render("pagini/produs", {prod: rezQuery.rows[0] });
+        res.render("Pagini/produs", {prod: rezQuery.rows[0] });
     });
 });
 
@@ -167,7 +167,7 @@ app.post("/inreg", function(req, res){
         }
         
         if(eroare)
-            res.render("pagini/inregistrare",{err:"Eroare formular. "+eroare, raspuns:""});
+            res.render("Pagini/inregistrare",{err:"Eroare formular. "+eroare, raspuns:""});
         
         if(!eroare){
             queryUtiliz = "SELECT * FROM Utilizatori WHERE username = $1";
@@ -179,7 +179,7 @@ app.post("/inreg", function(req, res){
                 }
                 else if(result.rows.length != 0){
                     eroare += "Username deja folosit.";
-                    res.render("pagini/inregistrare",{err:"Eroare formular. "+eroare, raspuns:""});
+                    res.render("Pagini/inregistrare",{err:"Eroare formular. "+eroare, raspuns:""});
                     return;
                 }
                 else{
@@ -189,10 +189,10 @@ app.post("/inreg", function(req, res){
                     client.query(comanda, function(err, rez){
                         if (err){
                             console.log(err);
-                            res.render("pagini/inregistrare",{err:"Eroare baza date.", raspuns:"Datele nu au fost introdduse."});
+                            res.render("Pagini/inregistrare",{err:"Eroare baza date.", raspuns:"Datele nu au fost introdduse."});
                         }
                         else{
-                            res.render("pagini/inregistrare",{err:"", raspuns:"Inregistrat cu succes."});
+                            res.render("Pagini/inregistrare",{err:"", raspuns:"Inregistrat cu succes."});
                             console.log(campuriText.email);
                         }
                     });
@@ -240,7 +240,7 @@ app.get("/*", function(req, res){
             }
             else
             {
-                res.render("pagini/eroare_generala");
+                res.render("Pagini/eroare_generala");
             }
         }
         else{
@@ -329,7 +329,7 @@ function RandeazaEroare(res, identificator, status,titlu, text, imagine){
     console.log(imagine);
     if(eroare && eroare.status)
         res.status(eroare.identificator);
-    res.render("pagini/eroare_generala",{titlu:titlu, text:text, imagine: imagine});
+    res.render("Pagini/eroare_generala",{titlu:titlu, text:text, imagine: imagine});
 }
 
 
