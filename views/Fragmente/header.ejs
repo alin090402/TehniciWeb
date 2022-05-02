@@ -34,11 +34,12 @@
                      <li><a href = "/index#Orar">Orar</a></li>
                  </ul>
              </li>
-             <li><a href="/shop">Cumpara</a>
+             
+             <li><a href="/produse">Cumpara</a>
                  <ul class = "submeniu">
-                     <li><a href = "/shop#Aventura">Aventura</a></li>
-                     <li><a href = "/shop#Fantasy">Fantasy</a></li>
-                     <li><a href = "/shop#Istorie">Istorie</a></li>
+                    <% for (let cat of locals.categorii) { %>
+                    <li><a href="/produse?tip=<%- cat.unnest %>"><%- cat.unnest %></a></li>
+                    <% } %>
                  </ul>
              </li>
              <li><a href="/contact">Contact</a> 
@@ -47,6 +48,23 @@
                      <li><a href = "/contact#NumarTelefon">Numar de telefon</a></li>
                      <li><a href = "/contact#Locatie">Locatie</a></li>
                  </ul>
+             </li>
+             <% if(locals.utilizator){ %> 
+             <li>
+                    <a href="/login">Login</a>
+                    <ul class = "submeniu">
+                        <li><a href = "/profil">Profil</a></li>
+                        <li><a href = "/logout">Logout</a></li>
+                    </ul>
+             </li>
+             <% } 
+            else { %>
+                <li>
+                    <a href="/login">Login</a>
+                </li>
+            <% } %> 
+             <li>
+                    <a href="/inregistrare">Inregistrare</a>
              </li>
          </ul>
          

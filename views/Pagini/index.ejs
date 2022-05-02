@@ -13,6 +13,25 @@
     <body>
         
         <%- include("../Fragmente/header.ejs")  %>
+        <%- include("../Fragmente/loginform.ejs") %>
+        
+        <% if(!locals.utilizator) {%> 
+            <form id="form_login"  method="post" class="date"  action="/login"  enctype="multipart/form-data">
+                <p>
+                    <label>
+                        Username: <input type="text" name="username" id="inp-username" value="prof<%= Math.floor(Math.random()*100000) %>" required pattern="[A-Za-z0-9]+">
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        Parola: <input id="parl" type="password" required  name="parola" value="">
+                    </label>
+                </p>
+                <p>		
+                    <input type="submit" value="Login">
+                </p>
+            </form>
+            <% } %>
 
         <main>
             <div id = "container"> 
@@ -136,6 +155,7 @@
                                 <td>14-16</td>
                                 <td>17-19</td>
                             </tr>
+                            
                         </tbody>
                         <caption>Orar prezentari carte</caption>
                     </table> 
