@@ -17,14 +17,25 @@ app.use(session({
 }));
 //client = new Client({user:})
 
-
+/*
 const client = new Client({
     host: 'localhost',
     user: 'postgres',
     password: 'alinsava',
     database: 'TehniciWeb',
     port: 5432
+})*/
+const client = new Client({
+    host: 'ec2-3-217-113-25.compute-1.amazonaws.com',
+    user: 'bnoicdvybxrdnm',
+    password: 'ac4a7637b0d59933b050a17b96b5f02d5b95e686e69d6c3a165f831eee510fd8',
+    database: 'dc61cc6bni874v',
+    port: 5432,
+    ssl: {
+    	rejectUnauthorized: false
+  	}
 })
+
 client.connect()
 
 app.set("view engine", "ejs");
