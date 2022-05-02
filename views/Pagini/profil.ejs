@@ -2,7 +2,7 @@
 <html lang="ro">
 	<head>
 		<title>Profil</title>
-		<%- include("../fragmente/head") %>
+		<%- include("../Fragmente/head") %>
         
 		<link rel="stylesheet" type="text/css" href="/resurse/css/contact.css" />
 		<script>
@@ -24,7 +24,7 @@
 	</head>
 	<body class="container">
 		<header>
-			<%- include("../fragmente/header") %>
+			<%- include("../Fragmente/header") %>
 		</header>
 		<main>
 		
@@ -33,10 +33,10 @@
                 <p>Mănânci prea multe prajituri și știi și tu asta!</p>
 				<p><%= locals.raspuns %></p>
 			</section>
-			<%- include("../fragmente/formular",{action:"/profil"}) %>
+			<%- include("../Fragmente/formular",{action:"/profil"}) %>
 		</main>
 		
-		<%- include("../fragmente/footer") %>
+		<%- include("../Fragmente/footer") %>
 		
 	</body>
 </html>
