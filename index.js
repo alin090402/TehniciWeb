@@ -17,14 +17,14 @@ app.use(session({
 }));
 //client = new Client({user:})
 
-/*
 const client = new Client({
     host: 'localhost',
     user: 'postgres',
     password: 'alinsava',
     database: 'TehniciWeb',
     port: 5432
-})*/
+})
+/*
 const client = new Client({
     host: 'ec2-3-217-113-25.compute-1.amazonaws.com',
     user: 'bnoicdvybxrdnm',
@@ -35,7 +35,7 @@ const client = new Client({
     	rejectUnauthorized: false
   	}
 })
-
+*/
 client.connect()
 
 app.set("view engine", "ejs");
@@ -45,6 +45,8 @@ app.use("/Resurse", express.static(__dirname + "/Resurse"));
 app.use("/*", function(req, res, next){
     client.query("select * from unnest(enum_range(null::tipuri_produse))", function(err, rezCateg){
         res.locals.utilizator = req.session.utilizator;
+        res.locals.mesaj_login = req.session.mesaj_login;
+        req.session.mesaj_login = null;
         if(err)
             RandeazaEroare(res, "Eroare server", 500, "Eroare server", "Eroare server");
         else{
@@ -111,11 +113,12 @@ app.post("/login", function(req, res){
         client.query(sql, [username, password], function(err, result) {
             if (err) {
                 console.log(err);
-                RandeazaEroare(res,500);
+                RandeazaEroare(res, "Eroare server", 500);
                 return;
             }
             if (result.rows.length == 0) {
-                RandeazaEroare(res,403);
+                req.session.mesaj_login = "Login esuat";
+                res.redirect("/index");
                 return;
             }
             else(result.rows.length == 1)
@@ -205,6 +208,50 @@ app.post("/inreg", function(req, res){
     });
 });
 
+
+app.post("/profil", function(req, res){
+    console.log("profil");
+    if (!req.session.utilizator){
+        res.render("pagini/eroare_generala",{text:"Nu sunteti logat."});
+        return;
+    }
+    var formular= new formidable.IncomingForm();
+ 
+    formular.parse(req,function(err, campuriText, campuriFile){
+       
+        var criptareParola=crypto.scryptSync(campuriText.parola,string_cr, 64).toString('hex');
+ 
+        //TO DO query
+        var queryUpdate=`update utilizatori set nume='${campuriText.nume}', prenume='${campuriText.prenume}', parola='${criptareParola}', email='${campuriText.email}', culoare_chat='${campuriText.culoare_chat}' where username='${campuriText.username}' and parola='${criptareParola}'`;
+       
+        client.query(queryUpdate,  function(err, rez){
+            if(err){
+                console.log(err);
+                res.render("Pagini/eroare_generala",{text:"Eroare baza date. Incercati mai tarziu."});
+                return;
+            }
+            console.log(rez.rowCount);
+            if (rez.rowCount==0){
+                res.render("Pagini/profil",{mesaj:"Update-ul nu s-a realizat. Verificati parola introdusa."});
+                return;
+            }
+            else
+            {
+                console.log("update");
+                req.session.utilizator.nume=campuriText.nume;
+                req.session.utilizator.prenume=campuriText.prenume;
+                req.session.utilizator.email=campuriText.email;
+                req.session.utilizator.culoare_chat=campuriText.culoare_chat;
+                res.render("pagini/profil",{mesaj:"Update-ul s-a realizat cu succes."});
+            }
+            //TO DO actualizare sesiune
+ 
+ 
+        });
+       
+ 
+    });
+});
 
 
 app.get("*/galerie_animata.css",function(req, res){
